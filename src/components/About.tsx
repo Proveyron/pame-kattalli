@@ -55,8 +55,10 @@ const About = () => {
               <p>
                 Es fundadora de Alma Tattoo y desarrolla su carrera entre Europa y Sudamérica, consolidando una
                 trayectoria internacional basada en la excelencia y el detalle.
-                <br></br>Cada tatuaje es concebido como una obra íntima y personalizada, pensada para transformar
-                emociones en arte permanente.
+              </p>
+              <p>
+                Cada tatuaje es concebido como una obra íntima y personalizada, pensada para transformar emociones en
+                arte permanente.
               </p>
               <p
                 className="text-foreground italic"
