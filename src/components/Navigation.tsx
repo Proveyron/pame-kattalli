@@ -47,9 +47,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex flex-col items-center leading-none"
           >
-            <span className={`text-3xl tracking-[0.2em] font-serif font-light transition-colors ${
-              isScrolled ? "text-foreground" : "text-white"
-            }`} style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="text-3xl tracking-[0.2em] font-serif font-light text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               PK
             </span>
           </button>
@@ -60,20 +58,14 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-[11px] tracking-[0.25em] font-normal hover:opacity-50 transition-opacity duration-300 ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
+                className="text-[11px] tracking-[0.25em] font-normal text-foreground hover:opacity-50 transition-opacity duration-300"
               >
                 {link.label}
               </button>
             ))}
             <button
               onClick={handleBooking}
-              className={`text-[11px] tracking-[0.25em] font-normal border px-6 py-3 transition-all duration-300 ${
-                isScrolled
-                  ? "border-foreground text-foreground hover:bg-foreground hover:text-primary-foreground"
-                  : "border-white text-white hover:bg-white hover:text-foreground"
-              }`}
+              className="text-[11px] tracking-[0.25em] font-normal border border-foreground text-foreground px-6 py-3 transition-all duration-300 hover:bg-foreground hover:text-background"
             >
               AGENDAR
             </button>
@@ -82,7 +74,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
+            className="md:hidden text-foreground"
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
