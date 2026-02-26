@@ -24,9 +24,11 @@ import gallery17 from "@/assets/gallery-17.jpg";
 import gallery18 from "@/assets/gallery-18.jpg";
 import gallery19 from "@/assets/gallery-19.jpg";
 import gallery20 from "@/assets/gallery-20.jpg";
+import gallery21 from "@/assets/gallery-21.jpg";
 
 const Portfolio = () => {
   const images = [
+    { src: gallery21, alt: "X-ray poppy leg tattoo", position: "center" },
     { src: gallery1, alt: "Fine line floral tattoo", position: "center" },
     { src: gallery7, alt: "Delicate rose tattoo", position: "center" },
     { src: gallery13, alt: "Smoke effect rib tattoo", position: "center" },
