@@ -11,7 +11,7 @@ const fadeUp = {
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-28 md:py-36 border-t border-foreground/10">
+    <section id="contato" className="py-16 md:py-36 border-t border-foreground/10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <motion.p className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6"
