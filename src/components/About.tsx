@@ -5,8 +5,8 @@ const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.7, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] as const },
-  }),
+    transition: { duration: 0.7, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] as const }
+  })
 };
 
 const About = () => {
@@ -17,20 +17,20 @@ const About = () => {
           <div className="order-2 md:order-1">
             <motion.p
               className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6"
-              variants={fadeUp} custom={0} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-            >
-              QUEM SOU EU
+              variants={fadeUp} custom={0} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>QUIÉN SOY
+
+
             </motion.p>
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-light mb-10 leading-[1.1]"
-              variants={fadeUp} custom={1} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-            >
+              variants={fadeUp} custom={1} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
+
               Pamela Roa
             </motion.h2>
             <motion.div
               className="space-y-6 text-base text-muted-foreground leading-[1.8]"
-              variants={fadeUp} custom={2} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-            >
+              variants={fadeUp} custom={2} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
+
               <p>
                 Pamela Roa es una eminencia mundial en tatuajes de líneas finas, reconocida por su precisión, delicadeza y nivel artístico excepcional. Es dueña y fundadora de los estudios Alma Tattoo, con presencia en tres países, consolidando una trayectoria internacional en Europa y América.
               </p>
@@ -51,18 +51,18 @@ const About = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-          >
+            transition={{ duration: 0.9, ease: "easeOut" }}>
+
             <img
               src={portraitImage}
               alt="Pamela Roa — Tattoo Artist"
-              className="w-full h-auto"
-            />
+              className="w-full h-auto" />
+
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default About;
