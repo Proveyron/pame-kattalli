@@ -4,9 +4,29 @@ import heart from "@/assets/portfolio-heart.jpeg";
 import lily from "@/assets/portfolio-lily.jpeg";
 import eyebrows1 from "@/assets/portfolio-eyebrows-1.jpeg";
 import eyebrows2 from "@/assets/portfolio-eyebrows-2.jpeg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
+import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
 
 const Portfolio = () => {
   const images = [
+    { src: gallery1, alt: "Fine line floral tattoo", position: "center" },
+    { src: gallery7, alt: "Delicate rose tattoo", position: "center" },
+    { src: gallery4, alt: "Shoulder fine line tattoo", position: "center" },
+    { src: gallery9, alt: "Anatomical heart with lily", position: "center" },
+    { src: gallery10, alt: "Translucent flower tattoo", position: "center" },
+    { src: gallery5, alt: "Fine line collarbone tattoo", position: "center" },
+    { src: gallery8, alt: "Koi fish tattoo", position: "center" },
+    { src: gallery6, alt: "Delicate side tattoo", position: "center 30%" },
+    { src: gallery3, alt: "Pamela tattooing", position: "center 20%" },
+    { src: gallery2, alt: "Client with vine tattoo", position: "center" },
     { src: tattooSmoke, alt: "Fine line abstract tattoo", position: "center" },
     { src: flower, alt: "Delicate floral tattoo", position: "center 30%" },
     { src: heart, alt: "Anatomical heart with flowers", position: "center 30%" },
