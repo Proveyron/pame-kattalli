@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import tattooSmoke from "@/assets/portfolio-tattoo-smoke.jpeg";
 import flower from "@/assets/portfolio-flower.jpeg";
 import heart from "@/assets/portfolio-heart.jpeg";
@@ -61,18 +62,30 @@ const Portfolio = () => {
     <section id="portfolio" className="py-28 md:py-36">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
-          <p className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6">
+          <motion.p
+            className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6"
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.6 }}
+          >
             TRABAJOS SELECCIONADOS
-          </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-16 leading-[1.1]">
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-light mb-16 leading-[1.1]"
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Portfólio
-          </h2>
+          </motion.h2>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {images.map((image, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="aspect-square overflow-hidden group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
               >
                 <img
                   src={image.src}
@@ -80,7 +93,7 @@ const Portfolio = () => {
                   style={{ objectPosition: image.position }}
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
