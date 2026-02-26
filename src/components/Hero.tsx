@@ -2,11 +2,11 @@ import logoHero from "@/assets/pk-logo-hero.png";
 
 const Hero = () => {
   return (
-    <section className="h-screen flex items-center justify-center bg-background">
+    <section className="min-h-screen flex items-center justify-center bg-background px-0 md:px-12">
       <img
         src={logoHero}
         alt="Pame Kattalii - Tattoo Artist"
-        className="w-full max-w-2xl px-8"
+        className="w-full md:max-w-lg lg:max-w-xl"
       />
     </section>
   );
