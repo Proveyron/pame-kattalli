@@ -31,6 +31,7 @@ const Portfolio = () => {
   const images = [
     { src: gallery21, alt: "X-ray poppy leg tattoo", position: "center" },
     { src: gallery1, alt: "Fine line floral tattoo", position: "center" },
+    { src: gallery9, alt: "Anatomical heart with lily", position: "center" },
     { src: gallery7, alt: "Delicate rose tattoo", position: "center" },
     { src: gallery13, alt: "Smoke effect rib tattoo", position: "center" },
     { src: gallery4, alt: "Shoulder fine line tattoo", position: "center" },
@@ -41,7 +42,6 @@ const Portfolio = () => {
     { src: gallery20, alt: "Bird and tree of life tattoo", position: "center" },
     { src: gallery8, alt: "Koi fish tattoo", position: "center" },
     { src: gallery15, alt: "Ankle vine tattoo", position: "center" },
-    { src: gallery9, alt: "Anatomical heart with lily", position: "center" },
     { src: gallery18, alt: "Bouquet hip tattoo", position: "center" },
     { src: gallery17, alt: "Fine line side body tattoo", position: "center" },
     { src: gallery14, alt: "Shoulder vine tattoo", position: "center" },
