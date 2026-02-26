@@ -14,16 +14,36 @@ import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
 import gallery10 from "@/assets/gallery-10.jpg";
+import gallery11 from "@/assets/gallery-11.jpg";
+import gallery12 from "@/assets/gallery-12.jpg";
+import gallery13 from "@/assets/gallery-13.jpg";
+import gallery14 from "@/assets/gallery-14.jpg";
+import gallery15 from "@/assets/gallery-15.jpg";
+import gallery16 from "@/assets/gallery-16.jpg";
+import gallery17 from "@/assets/gallery-17.jpg";
+import gallery18 from "@/assets/gallery-18.jpg";
+import gallery19 from "@/assets/gallery-19.jpg";
+import gallery20 from "@/assets/gallery-20.jpg";
 
 const Portfolio = () => {
   const images = [
     { src: gallery1, alt: "Fine line floral tattoo", position: "center" },
     { src: gallery7, alt: "Delicate rose tattoo", position: "center" },
+    { src: gallery13, alt: "Smoke effect rib tattoo", position: "center" },
     { src: gallery4, alt: "Shoulder fine line tattoo", position: "center" },
-    { src: gallery9, alt: "Anatomical heart with lily", position: "center" },
+    { src: gallery11, alt: "Brain heart sentipensante tattoo", position: "center" },
     { src: gallery10, alt: "Translucent flower tattoo", position: "center" },
+    { src: gallery16, alt: "Delicate lily forearm tattoo", position: "center" },
     { src: gallery5, alt: "Fine line collarbone tattoo", position: "center" },
+    { src: gallery20, alt: "Bird and tree of life tattoo", position: "center" },
     { src: gallery8, alt: "Koi fish tattoo", position: "center" },
+    { src: gallery15, alt: "Ankle vine tattoo", position: "center" },
+    { src: gallery9, alt: "Anatomical heart with lily", position: "center" },
+    { src: gallery18, alt: "Bouquet hip tattoo", position: "center" },
+    { src: gallery17, alt: "Fine line side body tattoo", position: "center" },
+    { src: gallery14, alt: "Shoulder vine tattoo", position: "center" },
+    { src: gallery19, alt: "Anatomical heart forearm tattoo", position: "center" },
+    { src: gallery12, alt: "Sentipensante tattoo angle", position: "center" },
     { src: gallery6, alt: "Delicate side tattoo", position: "center 30%" },
     { src: gallery3, alt: "Pamela tattooing", position: "center 20%" },
     { src: gallery2, alt: "Client with vine tattoo", position: "center" },
