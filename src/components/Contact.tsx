@@ -1,19 +1,31 @@
+import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 25 },
+  visible: (i: number) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.6, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] as const },
+  }),
+};
 
 const Contact = () => {
   return (
     <section id="contato" className="py-28 md:py-36 border-t border-foreground/10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
-          <p className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6">
+          <motion.p className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6"
+            variants={fadeUp} custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             CONTACTO
-          </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-16 leading-[1.1]">
+          </motion.p>
+          <motion.h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-16 leading-[1.1]"
+            variants={fadeUp} custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             Encuéntranos
-          </h2>
+          </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-            <div className="space-y-10">
+            <motion.div className="space-y-10"
+              variants={fadeUp} custom={2} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <div className="flex items-start gap-5">
                 <MapPin className="h-4 w-4 mt-1.5 flex-shrink-0" />
                 <div className="text-sm leading-[1.8] text-muted-foreground">
@@ -60,9 +72,11 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="h-[500px]">
+            <motion.div className="h-[500px]"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }}>
               <iframe
                 title="Localización del Estudio"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1168726738756!2d-43.36526908506937!3d-22.999133184964594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd0436e0f2341%3A0x8c8b5d4c0c8b5d4c!2sAv.%20das%20Am%C3%A9ricas%2C%203333%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022631-003!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
@@ -73,7 +87,7 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
