@@ -17,15 +17,10 @@ const About = () => {
           <div className="order-2 md:order-1">
             <motion.p
               className="text-[11px] tracking-[0.3em] text-muted-foreground mb-6"
-              variants={fadeUp} custom={0} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>QUIÉN SOY
-
-
-            </motion.p>
+              variants={fadeUp} custom={0} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>QUIÉN SOY</motion.p>
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-light mb-10 leading-[1.1]"
-              variants={fadeUp} custom={1} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
-
-              Pamela Roa
+              variants={fadeUp} custom={1} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>Pamela Roa
             </motion.h2>
             <motion.div
               className="space-y-6 text-base text-muted-foreground leading-[1.8]"
