@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import pkMonogram from "@/assets/pk-monogram.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,11 +46,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex flex-col items-center leading-none"
+            className="flex items-center"
           >
-            <span className="text-3xl tracking-[0.2em] font-serif font-light text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              PK
-            </span>
+            <img src={pkMonogram} alt="PK" className="h-10 w-auto" />
           </button>
 
           <div className="hidden md:flex items-center gap-12">
