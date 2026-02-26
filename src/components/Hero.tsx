@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoHero from "@/assets/pk-logo-hero.png";
+import logoHero from "@/assets/pk-logo-hero.svg";
 import pamelaWorking from "@/assets/pamela-working.jpg";
 
 const Hero = () => {
