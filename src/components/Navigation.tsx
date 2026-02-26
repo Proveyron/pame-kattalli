@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,6 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 md:px-12 py-6">
         <div className="flex items-center justify-between">
-          {/* Monogram */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex flex-col items-center leading-none"
@@ -52,7 +52,6 @@ const Navigation = () => {
             </span>
           </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               <button
@@ -71,37 +70,71 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground relative w-5 h-5"
           >
-            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <AnimatePresence mode="wait">
+              {isMobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X className="h-5 w-5" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Menu className="h-5 w-5" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-8 pb-6">
-            <div className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className="text-foreground text-left text-[11px] tracking-[0.25em]"
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              className="md:hidden mt-8 pb-6 overflow-hidden"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <div className="flex flex-col gap-6">
+                {navLinks.map((link, i) => (
+                  <motion.button
+                    key={link.id}
+                    onClick={() => handleNavClick(link.id)}
+                    className="text-foreground text-left text-[11px] tracking-[0.25em]"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.08 }}
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+                <motion.button
+                  onClick={handleBooking}
+                  className="text-[11px] tracking-[0.25em] border border-foreground text-foreground px-6 py-3 hover:bg-foreground hover:text-primary-foreground transition-all duration-300 w-fit"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: navLinks.length * 0.08 }}
                 >
-                  {link.label}
-                </button>
-              ))}
-              <button
-                onClick={handleBooking}
-                className="text-[11px] tracking-[0.25em] border border-foreground text-foreground px-6 py-3 hover:bg-foreground hover:text-primary-foreground transition-all duration-300 w-fit"
-              >
-                AGENDAR
-              </button>
-            </div>
-          </div>
-        )}
+                  AGENDAR
+                </motion.button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
