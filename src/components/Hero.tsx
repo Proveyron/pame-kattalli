@@ -1,38 +1,37 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/pamela-hero-new.jpeg";
 
 const Hero = () => {
   const handleBooking = () => {
-    window.open("https://wa.me/5521999999999?text=Olá! Gostaria de agendar um horário", "_blank");
+    window.open("https://wa.me/5521982387639?text=Hola! Me gustaría agendar una cita", "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div 
+    <section className="relative h-screen flex items-end overflow-hidden">
+      <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 65%',
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 65%",
         }}
       />
-      
-      <div className="relative z-10 container mx-auto px-6 text-center text-white pt-20">
-        <h1 className="text-5xl md:text-7xl font-light mb-6 tracking-tight">
-          Sua História na Pele
-        </h1>
-        <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto opacity-90">
-          Desenhos exclusivos que contam histórias delicadas e elegantes
-        </p>
-        <Button 
-          onClick={handleBooking}
-          size="lg"
-          className="bg-white text-foreground hover:bg-white/90 transition-all duration-300 text-lg px-8 py-6"
-        >
-          Agendar Consulta
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+      <div className="relative z-10 container mx-auto px-6 md:px-12 pb-20 md:pb-28">
+        <div className="max-w-2xl">
+          <p className="text-[11px] tracking-[0.3em] text-white/80 mb-4">
+            TATTOO ARTIST
+          </p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-light leading-[0.95] mb-8" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Pame<br />Kattalii
+          </h1>
+          <button
+            onClick={handleBooking}
+            className="text-[11px] tracking-[0.25em] border border-white text-white px-8 py-4 hover:bg-white hover:text-foreground transition-all duration-300"
+          >
+            SOLICITAR COTIZACIÓN
+          </button>
+        </div>
       </div>
     </section>
   );
