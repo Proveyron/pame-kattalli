@@ -19,7 +19,7 @@ const Hero = () => {
         <img
           src={pamelaWorking}
           alt="Pamela Kattalii tatuando"
-          className="w-full h-[60vh] object-cover object-center"
+          className="w-full h-screen object-cover object-center"
         />
       </motion.div>
 
