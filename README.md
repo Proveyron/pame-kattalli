@@ -71,3 +71,21 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Deploy no GitHub Pages
+
+Este repositório inclui workflow em `.github/workflows/deploy-pages.yml` para build e publicação automática no branch `gh-pages` ao fazer push em `main`, `master` ou `work`.
+
+Checklist no GitHub:
+
+1. Vá em **Settings → Pages**.
+2. Em **Source**, selecione **Deploy from a branch**.
+3. Em **Branch**, selecione `gh-pages` e pasta `/(root)`.
+4. Faça push em `main`, `master` ou `work` para disparar o workflow.
+5. Confira na aba **Actions** se o job "Deploy to GitHub Pages" concluiu com sucesso e se o branch `gh-pages` foi atualizado.
+
+Se aparecer erro `404` para `main.tsx` ou `favicon.png`, normalmente o Pages ainda está apontando para a branch errada (ex.: `main` root).
+
+URL final esperada:
+
+`https://<seu-usuario>.github.io/pame-kattalli/`
