@@ -33,12 +33,12 @@ const About = () => {
 
               </p>
               <p>Es fundadora de Alma Tattoo y desarrolla su carrera entre Europa y Sudamérica, consolidando una trayectoria internacional basada en la excelencia y el detalle.
+ Cada tatuaje es concebido como una obra íntima y personalizada, pensada para transformar emociones en arte permanente.
 
-Cada tatuaje es concebido como una obra íntima y personalizada, pensada para transformar emociones en arte permanente.
-
+              
               </p>
-              <p className="text-foreground italic" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.15rem" }}>
-                Su trabajo no es solo un tatuaje: es una obra íntima y exclusiva que transforma historias en arte permanente.
+              <p className="text-foreground italic" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.15rem" }}>En su estudio encontrarás un espacio profesional, seguro y cuidadosamente diseñado, que cumple con todas las normativas sanitarias vigentes de la Seremi de Salud.
+
               </p>
             </motion.div>
           </div>
