@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import logoHero from "@/assets/pk-logo-hero.png";
+import pamelaWorking from "@/assets/pamela-working.jpg";
 
 const Hero = () => {
   const handleBooking = () => {
@@ -7,8 +8,23 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background px-8 md:px-12">
-      <div className="flex flex-col items-center">
+    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-background">
+      {/* Mobile-only hero image */}
+      <motion.div
+        className="w-full md:hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <img
+          src={pamelaWorking}
+          alt="Pamela Kattalii tatuando"
+          className="w-full h-[60vh] object-cover object-center"
+        />
+      </motion.div>
+
+      {/* Logo + CTA */}
+      <div className="flex flex-col items-center px-8 md:px-12 py-12 md:py-0 md:min-h-screen md:justify-center">
         <motion.img
           src={logoHero}
           alt="Pame Kattalii - Tattoo Artist"
