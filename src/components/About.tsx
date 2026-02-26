@@ -11,7 +11,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section id="sobre" className="py-28 md:py-36">
+    <section id="sobre" className="py-16 md:py-36">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start max-w-6xl mx-auto">
           <div className="order-2 md:order-1">

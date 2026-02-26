@@ -59,7 +59,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-28 md:py-36">
+    <section id="portfolio" className="py-16 md:py-36">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <motion.p
