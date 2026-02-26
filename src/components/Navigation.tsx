@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
@@ -23,58 +22,61 @@ const Navigation = () => {
   };
 
   const handleBooking = () => {
-    window.open("https://wa.me/5521982387639?text=Olá! Gostaria de agendar um horário", "_blank");
+    window.open("https://wa.me/5521982387639?text=Hola! Me gustaría agendar una cita", "_blank");
     setIsMobileMenuOpen(false);
   };
 
   const navLinks = [
-    { id: "servicos", label: "Serviços" },
-    { id: "sobre", label: "Sobre" },
-    { id: "portfolio", label: "Portfólio" },
-    { id: "experiencia", label: "Experiência" },
-    { id: "faq", label: "FAQ" },
-    { id: "contato", label: "Contato" },
+    { id: "sobre", label: "SOBRE" },
+    { id: "portfolio", label: "PORTFÓLIO" },
+    { id: "contato", label: "CONTACTO" },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-sm shadow-md" 
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 md:px-12 py-6">
         <div className="flex items-center justify-between">
-          <button 
+          {/* Monogram */}
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className={`text-2xl font-light tracking-wider transition-colors ${
-              isScrolled ? "text-foreground" : "text-white"
-            }`}
+            className="flex flex-col items-center leading-none"
           >
-            Pamela Roa
+            <span className={`text-3xl tracking-[0.2em] font-serif font-light transition-colors ${
+              isScrolled ? "text-foreground" : "text-white"
+            }`} style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              PK
+            </span>
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-sm font-light hover:opacity-70 transition-opacity ${
+                className={`text-[11px] tracking-[0.25em] font-normal hover:opacity-50 transition-opacity duration-300 ${
                   isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
                 {link.label}
               </button>
             ))}
-            <Button 
+            <button
               onClick={handleBooking}
-              variant={isScrolled ? "default" : "secondary"}
-              className="ml-4"
+              className={`text-[11px] tracking-[0.25em] font-normal border px-6 py-3 transition-all duration-300 ${
+                isScrolled
+                  ? "border-foreground text-foreground hover:bg-foreground hover:text-primary-foreground"
+                  : "border-white text-white hover:bg-white hover:text-foreground"
+              }`}
             >
-              Agendar
-            </Button>
+              AGENDAR
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,28 +84,29 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-background rounded-lg shadow-lg">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden mt-8 pb-6">
+            <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className="text-foreground text-left px-4 py-2 hover:bg-muted transition-colors"
+                  className="text-foreground text-left text-[11px] tracking-[0.25em]"
                 >
                   {link.label}
                 </button>
               ))}
-              <div className="px-4">
-                <Button onClick={handleBooking} className="w-full">
-                  Agendar
-                </Button>
-              </div>
+              <button
+                onClick={handleBooking}
+                className="text-[11px] tracking-[0.25em] border border-foreground text-foreground px-6 py-3 hover:bg-foreground hover:text-primary-foreground transition-all duration-300 w-fit"
+              >
+                AGENDAR
+              </button>
             </div>
           </div>
         )}

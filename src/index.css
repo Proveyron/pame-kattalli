@@ -1,48 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* #F6F1E8 = hsl(38, 42%, 94%) */
+    --background: 38 42% 94%;
+    /* #111111 = hsl(0, 0%, 7%) */
+    --foreground: 0 0% 7%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 38 42% 94%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 38 42% 94%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 38 42% 94%;
 
-    --secondary: 35 25% 90%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 38 30% 89%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 35 20% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 38 25% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 35 30% 88%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 38 30% 89%;
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 35 15% 90%;
-    --input: 35 15% 90%;
-    --ring: 0 0% 10%;
+    --border: 0 0% 7%;
+    --input: 0 0% 80%;
+    --ring: 0 0% 7%;
 
-    --radius: 0.5rem;
-
-    /* Custom design tokens for luxury feel */
-    --warm-beige: 35 25% 90%;
-    --soft-beige: 35 20% 95%;
-    --charcoal: 0 0% 15%;
-    --warm-white: 35 10% 98%;
+    --radius: 0px;
   }
 }
 
@@ -53,5 +47,14 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
   }
 }
