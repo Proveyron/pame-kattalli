@@ -26,14 +26,16 @@ const About = () => {
               className="space-y-6 text-base text-muted-foreground leading-[1.8]"
               variants={fadeUp} custom={2} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
 
-              <p>
-                Pamela Roa es una eminencia mundial en tatuajes de líneas finas, reconocida por su precisión, delicadeza y nivel artístico excepcional. Es dueña y fundadora de los estudios Alma Tattoo, con presencia en tres países, consolidando una trayectoria internacional en Europa y América.
+              <p>Pamela Roa es tatuadora especializada en fine line, reconocida por la precisión, delicadeza y sensibilidad artística que caracterizan cada una de sus piezas.
+
               </p>
-              <p>
-                Cada uno de sus diseños es completamente personalizado, creado para plasmar la historia, esencia y emociones de cada cliente en su piel. Además, se formó como micropigmentadora a nivel mundial bajo la técnica de microblading, ampliando su dominio en el arte de la estética y el detalle.
+              <p>Su trabajo se enfoca en líneas minimalistas y composiciones atemporales, creando diseños exclusivos que respetan la esencia y la historia de cada persona.
+
               </p>
-              <p>
-                En su estudio encontrarás un trabajo basado en la confianza, el profesionalismo y la excelencia, cumpliendo rigurosamente con todas las normativas exigidas por la Seremi de Salud.
+              <p>Es fundadora de Alma Tattoo y desarrolla su carrera entre Europa y Sudamérica, consolidando una trayectoria internacional basada en la excelencia y el detalle.
+
+Cada tatuaje es concebido como una obra íntima y personalizada, pensada para transformar emociones en arte permanente.
+
               </p>
               <p className="text-foreground italic" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.15rem" }}>
                 Su trabajo no es solo un tatuaje: es una obra íntima y exclusiva que transforma historias en arte permanente.
@@ -41,12 +43,10 @@ const About = () => {
             </motion.div>
           </div>
 
-          <motion.div
-            className="order-1 md:order-2"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.9, ease: "easeOut" }}>
+          <motion.div className="order-1 md:order-2" initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}>
 
             <img
               src={portraitImage}
